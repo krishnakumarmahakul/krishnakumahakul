@@ -17,25 +17,25 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "About Me",
-    href: "/about",
+    href: "#about",
     description:
       "Learn more about my background, skills, and professional journey.",
   },
   {
     title: "Projects",
-    href: "/projects",
+    href: "#projects",
     description:
       "Explore the projects I've worked on and my contribution to each.",
   },
   {
     title: "Blog",
-    href: "/blog",
+    href: "#blog",
     description:
       "Read my thoughts on technology, development, and industry trends.",
   },
   {
     title: "Contact",
-    href: "/contactme",
+    href: "#contact",
     description:
       "Get in touch with me for collaborations, opportunities, or just to say hi.",
   },
@@ -46,7 +46,7 @@ export function NavigationMenuDemo() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/" >
+          <Link href="#home">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
             </NavigationMenuLink>
@@ -60,7 +60,7 @@ export function NavigationMenuDemo() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-100 to-gray-200 p-6 no-underline outline-none focus:shadow-md text-slate-900"
-                    href="/portfolio"
+                    href="#home"
                   >
                     <div className="mt-4 mb-2 text-lg font-medium">
                       Portfolio Overview
@@ -75,7 +75,7 @@ export function NavigationMenuDemo() {
                 <NavigationMenuLink asChild>
                   <a
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900"
-                    href="/skills"
+                    href="#skills"
                   >
                     <div className="text-sm font-medium leading-none">Skills</div>
                     <p className="line-clamp-2 text-sm leading-snug text-slate-600">
@@ -88,7 +88,7 @@ export function NavigationMenuDemo() {
                 <NavigationMenuLink asChild>
                   <a
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900"
-                    href="/experience"
+                    href="#experience"
                   >
                     <div className="text-sm font-medium leading-none">Experience</div>
                     <p className="line-clamp-2 text-sm leading-snug text-slate-600">
@@ -101,11 +101,11 @@ export function NavigationMenuDemo() {
                 <NavigationMenuLink asChild>
                   <a
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900"
-                    href="/education"
+                    href="#projects"
                   >
-                    <div className="text-sm font-medium leading-none">Education</div>
+                    <div className="text-sm font-medium leading-none">Projects</div>
                     <p className="line-clamp-2 text-sm leading-snug text-slate-600">
-                      Academic background and certifications
+                      Featured work and case studies
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -130,7 +130,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact" legacyBehavior passHref>
+          <Link href="#contact">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact Me
             </NavigationMenuLink>

@@ -1,43 +1,40 @@
-import { Navbar } from "./components/Navbar";
-import { SkillsSection } from "./skills/page";
+import FrontPage from "@/components/layout/FrontPage";
+import Hero from "@/components/layout/Hero";
+import Header from "@/components/layout/Header";
+
+import { SkillsBento } from "@/components/layout/SkillsBento";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-
-      {/* Home Section */}
-      <section id="home" className="min-h-screen pt-20 flex items-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Welcome to My Portfolio</h1>
-          <p className="text-xl text-gray-600">Your intro content here</p>
+      <section id="home" className="min-h-screen">
+        <div className="min-h-screen">
+          <FrontPage />
         </div>
       </section>
 
-      {/* Skills Section */}
-      <SkillsSection />
-
-      {/* Experience Section */}
-      <section id="experience" className="min-h-screen py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">Experience</h2>
-          {/* Experience content */}
+      <main>
+        <Hero />
+      </main>
+      <section id="skills" className="min-h-screen ">
+        <div className="max-w-full">
+          <SkillsBento />
         </div>
       </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="min-h-screen py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">Projects</h2>
-          {/* Projects content */}
+      
+      <section id="experience" className="min-h-screen py-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-12">
+            Academics & Experience
+          </h2>
         </div>
       </section>
-
-      {/* Blogs Section */}
-      <section id="blogs" className="min-h-screen py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">Blogs</h2>
-          {/* Blogs content */}
+      
+      <section id="contact" className="min-h-screen py-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-12">
+            Contact Me
+          </h2>
         </div>
       </section>
     </>
