@@ -74,7 +74,9 @@ export default function Footer() {
           </h3>
           <div className="flex items-center gap-4 text-xl">
             <a 
-              href="" 
+              href="#" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-125 hover:-rotate-12 transition-all duration-300 hover:text-blue-400 group"
               aria-label="Facebook"
             >
@@ -82,6 +84,8 @@ export default function Footer() {
             </a>
             <a 
               href="https://x.com/_k_r_ishna" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-125 hover:rotate-12 transition-all duration-300 hover:text-sky-400 group"
               aria-label="Twitter"
             >
@@ -89,6 +93,8 @@ export default function Footer() {
             </a>
             <a 
               href="https://dribbble.com/krishnakumar637290" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-125 hover:-rotate-12 transition-all duration-300 hover:text-pink-400 group"
               aria-label="Dribbble"
             >
@@ -96,6 +102,8 @@ export default function Footer() {
             </a>
             <a 
               href="https://www.instagram.com/_k_r_i_s_h_n_a_86/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-125 hover:rotate-12 transition-all duration-300 hover:text-pink-500 group"
               aria-label="Instagram"
             >
@@ -103,6 +111,8 @@ export default function Footer() {
             </a>
             <a 
               href="https://www.linkedin.com/in/krishna-kumar-mahakul-a13a28256/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-125 hover:-rotate-12 transition-all duration-300 hover:text-blue-500 group"
               aria-label="LinkedIn"
             >
@@ -119,12 +129,22 @@ export default function Footer() {
           <span>2025 Your Company. All rights reserved.</span>
         </div>
         <div className="flex items-center gap-4 text-sm text-neutral-500">
-          <a href="#" className="hover:text-white transition-colors duration-200 flex items-center gap-1">
+          <a 
+            href="#" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors duration-200 flex items-center gap-1"
+          >
             <i className="ri-shield-check-line"></i>
             Privacy Policy
           </a>
           <span>•</span>
-          <a href="#" className="hover:text-white transition-colors duration-200 flex items-center gap-1">
+          <a 
+            href="#" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors duration-200 flex items-center gap-1"
+          >
             <i className="ri-file-text-line"></i>
             Terms of Service
           </a>

@@ -67,7 +67,6 @@ function RecentWorks() {
               </div>
 
               {/* Preview Link */}
-              {/* Preview Link */}
               <a
                 href="https://coyolia.com/"
                 target="_blank"
@@ -331,8 +330,13 @@ function RecentWorks() {
         <div className="flex justify-center mt-8 md:mt-12">
           <button className="group relative px-5 py-2.5 md:px-6 md:py-3 bg-white text-black rounded-full font-['inter2'] font-semibold text-sm md:text-base hover:scale-110 transition-all duration-300 overflow-hidden border-2 border-white hover:border-neutral-400">
             <span className="relative z-10 flex items-center gap-2">
-              <a target="_blank" href="https://github.com/krishnakumarmahakul/">View All Projects</a>
-              
+              <a 
+                target="_blank" 
+                rel="noopener noreferrer"
+                href="https://github.com/krishnakumarmahakul/"
+              >
+                View All Projects
+              </a>
               <i className="ri-arrow-right-line text-base md:text-lg group-hover:translate-x-2 transition-transform duration-300"></i>
             </span>
           </button>
