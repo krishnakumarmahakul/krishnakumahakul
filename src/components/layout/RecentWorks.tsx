@@ -1,172 +1,345 @@
-"use client"
+"use client";
 
-import React from 'react'
-
+import React from "react";
+import Image from "next/image";
+import coyoliaPreview from "../../assets/images/image.png";
+import { Link } from "lucide-react";
 function RecentWorks() {
   return (
-    
     <section className="w-full bg-black py-16 md:py-24 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-['inter2'] font-bold text-white mb-4 hover:scale-105 transition-transform duration-300 inline-block">
+        <div className="mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-['inter2'] font-bold text-white mb-4 hover:scale-105 transition-transform duration-300 inline-block">
             Recent Works
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl">
-            Explore my latest projects showcasing modern design, seamless user experience, and innovative solutions.
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-2xl">
+            Explore my latest projects showcasing modern design, seamless user
+            experience, and innovative solutions.
           </p>
         </div>
 
-        {/* Bento Grid - Smaller boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px]">
-          
-          {/* Large Card - Keyboard Shortcuts */}
-          <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-900/20 via-neutral-900 to-black border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6">
-            <div className="absolute top-6 left-6 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="ri-keyboard-line text-2xl text-orange-400"></i>
-            </div>
-            
-            <div className="absolute bottom-6 left-6 right-6">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Keyboard shortcuts
+        {/* Bento Grid - Irregular Shapes */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[minmax(150px,170px)]">
+          <div className="md:col-span-7 md:row-span-2 group relative overflow-hidden  bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 p-5 md:p-6 lg:p-8 flex flex-col">
+            {/* Header Section - Compact */}
+            <div className="mb-3 md:mb-4 flex-shrink-0">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-1.5">
+                Coyolia Technology
               </h3>
-              <p className="text-neutral-400 text-sm">
-                Work efficiently with instant access to common actions.
+              <p className="text-neutral-400 text-xs md:text-sm line-clamp-2">
+                Full-stack website designed and developed during internship
               </p>
             </div>
 
-            {/* Animated command palette mockup */}
-            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 bg-neutral-800/80 backdrop-blur-sm border border-neutral-700 rounded-xl p-3 w-60 shadow-2xl group-hover:scale-105 transition-transform duration-300">
-              <div className="text-neutral-500 text-xs mb-2 flex items-center gap-2">
-                <i className="ri-search-line"></i>
-                Run command...
-              </div>
-              <div className="space-y-1">
-                <div className="flex items-center justify-between text-xs text-neutral-300 hover:bg-neutral-700/50 p-2 rounded-lg cursor-pointer">
-                  <span>Mark Task as Done</span>
-                  <kbd className="bg-neutral-700 px-1.5 py-0.5 rounded text-xs">⌘</kbd>
+            {/* Tech Stack - Compact Row */}
+            <div className="flex flex-wrap gap-1.5 mb-3 md:mb-4 flex-shrink-0">
+              <span className="text-xs px-2 py-0.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-md hover:bg-blue-500/20 transition-all duration-200 cursor-default">
+                Next.js
+              </span>
+              <span className="text-xs px-2 py-0.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-md hover:bg-purple-500/20 transition-all duration-200 cursor-default">
+                React
+              </span>
+              <span className="text-xs px-2 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-md hover:bg-green-500/20 transition-all duration-200 cursor-default">
+                Tailwind
+              </span>
+            </div>
+
+            {/* Browser Preview - Flexible */}
+            <div className="relative bg-black rounded-xl p-3 md:p-4 border border-neutral-700 group-hover:border-neutral-600 transition-all duration-300 flex-1 flex flex-col min-h-0">
+              {/* Browser Chrome */}
+              <div className="flex items-center gap-1.5 mb-2 pb-2 border-b border-neutral-700 flex-shrink-0">
+                <div className="flex gap-1">
+                  <div className="w-2 h-2 rounded-full bg-red-500 group-hover:animate-pulse"></div>
+                  <div
+                    className="w-2 h-2 rounded-full bg-yellow-500 group-hover:animate-pulse"
+                    style={{ animationDelay: "0.1s" }}
+                  ></div>
+                  <div
+                    className="w-2 h-2 rounded-full bg-green-500 group-hover:animate-pulse"
+                    style={{ animationDelay: "0.2s" }}
+                  ></div>
                 </div>
-                <div className="flex items-center justify-between text-xs text-neutral-300 hover:bg-neutral-700/50 p-2 rounded-lg cursor-pointer">
-                  <span>Open To Do List</span>
-                  <kbd className="bg-neutral-700 px-1.5 py-0.5 rounded text-xs">⌘T</kbd>
+                <div className="flex-1 ml-2 bg-neutral-700/50 rounded px-2 py-0.5 text-xs text-neutral-300 flex items-center gap-1.5 hover:bg-neutral-700/70 transition-colors">
+                  <i className="ri-lock-line text-xs"></i>
+                  <span className="truncate">coyolia.com</span>
+                </div>
+              </div>
+
+              {/* Preview Link */}
+              {/* Preview Link */}
+              <a
+                href="https://coyolia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative overflow-hidden rounded-lg bg-black border border-neutral-700 hover:border-blue-500/50 transition-all duration-300 group/link flex-1 min-h-0 w-full"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Content */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={coyoliaPreview}
+                    alt="Coyolia Technology Website Preview"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority
+                    className="object-cover group-hover/link:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </a>
+            </div>
+
+            {/* Footer Actions - Compact */}
+            <div className="mt-2 md:mt-3 flex items-center justify-between text-xs flex-shrink-0">
+              <div className="flex items-center gap-1.5 text-neutral-400 group-hover:text-neutral-300 transition-colors">
+                <i className="ri-code-s-slash-line"></i>
+                <span>Full Stack</span>
+              </div>
+              <a
+                href="https://coyolia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-blue-400 hover:text-blue-300 hover:scale-110 transition-all duration-300 cursor-pointer group/link"
+              >
+                <span>Visit</span>
+                <i className="ri-arrow-right-up-line group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-300"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Route to Affordable Storage Card - Takes right half, taller */}
+          <div className="md:col-span-5 md:row-span-2 group relative overflow-hidden  md:rounded-1xl bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6 md:p-8 lg:p-10">
+            <div className="mb-4 md:mb-6">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                Route to Affordable Storage
+              </h3>
+              <p className="text-neutral-400 text-xs md:text-sm lg:text-base">
+                Send compliance data to cloud storage and monitoring data to
+                SIEM platforms for real-time analysis.
+              </p>
+            </div>
+
+            {/* Flow diagram */}
+            <div className="relative bg-neutral-800/50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-neutral-700">
+              <div className="flex flex-col items-center justify-between gap-3 md:gap-4">
+                <div className="flex flex-col items-center gap-1 md:gap-2">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                    <i className="ri-database-2-line text-lg md:text-xl text-neutral-400"></i>
+                  </div>
+                  <div className="text-xs text-neutral-400 text-center">
+                    <div>18.6 GB/s</div>
+                    <div className="mt-1 font-semibold">Telemetry</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-center relative w-full">
+                  <div className="absolute top-1/2 left-0 right-0 h-px bg-neutral-700"></div>
+                  <div className="relative bg-yellow-500 text-black w-5 h-5 md:w-6 md:h-6 rounded flex items-center justify-center text-xs font-bold z-10">
+                    1
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-1 md:gap-2">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                    <i className="ri-cpu-line text-lg md:text-xl text-neutral-400"></i>
+                  </div>
+                  <div className="text-xs text-neutral-400 text-center">
+                    <div className="font-semibold">o11y / SIEM</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 md:gap-4 justify-center w-full">
+                  <div className="flex flex-col items-center gap-1 md:gap-2">
+                    <div className="text-xs text-neutral-500">6.4 GB/s</div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                      <i className="ri-server-line text-sm md:text-lg text-neutral-400"></i>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center gap-1 md:gap-2">
+                    <div className="text-xs text-neutral-500">12.2 GB/s</div>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                      <i className="ri-cloud-line text-sm md:text-lg text-neutral-400"></i>
+                    </div>
+                    <span className="text-xs text-neutral-400">S3</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Team Planner Card */}
-          <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900/20 via-neutral-900 to-black border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6">
-            <div className="absolute top-6 left-6 w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="ri-calendar-check-line text-2xl text-blue-400"></i>
-            </div>
-
-            <div className="absolute bottom-6 left-6 right-6">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Team Planner
+          {/* Mask or Encrypt Sensitive Data Card - Bottom left, wider */}
+          <div className="md:col-span-5 md:row-span-2 group relative overflow-hidden  md:rounded-1xl bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6 md:p-8 lg:p-10">
+            <div className="mb-4 md:mb-6">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                Mask or Encrypt Sensitive Data
               </h3>
-              <p className="text-neutral-400 text-sm">
-                Keep track of the bigger picture by viewing all individual tasks.
+              <p className="text-neutral-400 text-xs md:text-sm lg:text-base">
+                Remove or encrypt sensitive data before it leaves your servers,
+                making compliance and security simple.
               </p>
             </div>
 
-            {/* Task cards mockup */}
-            <div className="absolute top-1/3 right-6 space-y-2">
-              <div className="bg-white/10 backdrop-blur-sm border border-neutral-700 rounded-lg p-3 w-52 shadow-xl group-hover:translate-x-2 transition-transform duration-300">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs text-red-400 bg-red-500/20 px-2 py-0.5 rounded">High</span>
-                  <i className="ri-more-2-fill text-neutral-500 text-sm"></i>
+            {/* Data masking illustration */}
+            <div className="relative bg-neutral-800/50  md:rounded-1xl p-4 md:p-6 border border-neutral-700">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+                {/* List of data */}
+                <div className="space-y-2 md:space-y-2 w-full md:w-auto">
+                  <div className="text-xs text-neutral-500 font-semibold mb-2 md:mb-4">
+                    LIST OF DATA
+                  </div>
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      className="w-3 h-3 md:w-4 md:h-4 accent-blue-500"
+                      checked
+                      readOnly
+                    />
+                    <span className="text-xs md:text-sm text-white">SSN</span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      className="w-3 h-3 md:w-4 md:h-4 accent-blue-500"
+                      checked
+                      readOnly
+                    />
+                    <span className="text-xs md:text-sm text-white">
+                      Address
+                    </span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      className="w-3 h-3 md:w-4 md:h-4 accent-blue-500"
+                      checked
+                      readOnly
+                    />
+                    <span className="text-xs md:text-sm text-white">
+                      Credit Card
+                    </span>
+                  </label>
                 </div>
-                <p className="text-xs text-white mb-1">Refactor legacy code</p>
-                <div className="flex items-center gap-1 text-xs text-neutral-400">
-                  <i className="ri-calendar-line text-xs"></i>
-                  <span>Apr 18</span>
+
+                {/* Processing icon */}
+                <div className="relative flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                    <i className="ri-cpu-line text-lg md:text-xl text-neutral-400"></i>
+                  </div>
+                  <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-5 h-5 md:w-6 md:h-6 bg-yellow-500 text-black rounded-full flex items-center justify-center text-xs font-bold">
+                    1
+                  </div>
                 </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm border border-neutral-700 rounded-lg p-3 w-52 shadow-xl group-hover:translate-x-4 transition-transform duration-300 delay-75">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs text-yellow-400 bg-yellow-500/20 px-2 py-0.5 rounded">Medium</span>
-                  <i className="ri-more-2-fill text-neutral-500 text-sm"></i>
-                </div>
-                <p className="text-xs text-white mb-1">SEO audit</p>
-                <div className="flex items-center gap-1 text-xs text-neutral-400">
-                  <i className="ri-calendar-line text-xs"></i>
-                  <span>Apr 24</span>
+
+                {/* Masked data */}
+                <div className="space-y-2 w-full md:w-auto">
+                  <div className="text-xs text-neutral-500 font-semibold mb-2 md:mb-4">
+                    MASKED DATA
+                  </div>
+                  <div className="bg-neutral-800 rounded-lg px-2 py-1 md:px-3 md:py-2 text-xs md:text-sm text-neutral-300 font-mono">
+                    ••• •• ••••
+                  </div>
+                  <div className="bg-neutral-800 rounded-lg px-2 py-1 md:px-3 md:py-2 text-xs md:text-sm text-neutral-300 font-mono">
+                    •••••••••••••••
+                  </div>
+                  <div className="bg-neutral-800 rounded-lg px-2 py-1 md:px-3 md:py-2 text-xs md:text-sm text-neutral-300 font-mono">
+                    •••• •••• •••• ••••
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Time-blocking Card */}
-          <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900/20 via-neutral-900 to-black border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6">
-            <div className="absolute top-6 left-6 w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="ri-time-line text-2xl text-purple-400"></i>
-            </div>
-
-            <div className="absolute bottom-6 left-6 right-6">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Time-blocking
+          {/* Platform Migration Card - Bottom right, narrower and taller */}
+          <div className="md:col-span-7 md:row-span-2 group relative overflow-hidden  bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6 md:p-8 lg:p-10">
+            <div className="mb-4 md:mb-6">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-3">
+                Platform Migration
               </h3>
-              <p className="text-neutral-400 text-sm">
-                Transform daily tasks into structured time blocks.
+              <p className="text-neutral-400 text-xs md:text-sm lg:text-base">
+                Bindplane simplifies and accelerates the migration to new
+                observability and SIEM platforms as the needs of your business
+                change.
               </p>
             </div>
 
-            {/* Meeting card mockup */}
-            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-sm rounded-xl p-4 w-60 shadow-2xl group-hover:scale-105 transition-transform duration-300">
-              <h4 className="text-neutral-800 font-semibold text-sm mb-1">Design meeting</h4>
-              <p className="text-xs text-neutral-600 mb-2">03:00 - 04:00 pm<br/>Weekly on Monday</p>
-              <button className="bg-blue-500 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-blue-600 transition-colors w-full">
-                <i className="ri-vidicon-line mr-1"></i>
-                Join Meeting
-              </button>
-              <div className="flex items-center gap-1 mt-2 text-xs text-neutral-500">
-                <i className="ri-group-line"></i>
-                <span>8 guests</span>
-              </div>
-            </div>
-          </div>
+            {/* Migration flow */}
+            <div className="relative bg-neutral-800/50 rounded-xl md:rounded-2xl p-4 md:p-6 border border-neutral-700">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+                {/* Source data grid */}
+                <div className="flex-shrink-0">
+                  <div className="grid grid-cols-3 gap-1 md:gap-2 w-24 h-24 md:w-32 md:h-32 bg-neutral-800 rounded-lg md:rounded-xl p-2 md:p-3">
+                    <div className="bg-neutral-600 rounded"></div>
+                    <div className="bg-neutral-700 rounded"></div>
+                    <div className="bg-neutral-600 rounded"></div>
+                    <div className="bg-neutral-700 rounded"></div>
+                    <div className="bg-neutral-600 rounded"></div>
+                    <div className="bg-neutral-700 rounded"></div>
+                    <div className="bg-neutral-600 rounded"></div>
+                    <div className="bg-neutral-700 rounded"></div>
+                    <div className="bg-neutral-600 rounded"></div>
+                  </div>
+                </div>
 
-          {/* Notifications Card */}
-          <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl bg-gradient-to-br from-pink-900/20 via-neutral-900 to-black border border-neutral-800 hover:border-neutral-600 transition-all duration-500 hover:scale-[1.02] p-6">
-            <div className="absolute top-6 left-6 w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="ri-notification-3-line text-2xl text-pink-400"></i>
-            </div>
+                {/* Arrow with badge */}
+                <div className="flex-1 flex items-center justify-center relative w-full md:w-auto">
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <div className="w-8 md:w-16 h-px bg-neutral-700"></div>
+                    <div className="relative">
+                      <i className="ri-arrow-right-line text-xl md:text-2xl text-neutral-600"></i>
+                      <div className="absolute -top-2 md:-top-3 left-1/2 -translate-x-1/2 w-5 h-5 md:w-6 md:h-6 bg-yellow-500 text-black rounded-full flex items-center justify-center text-xs font-bold">
+                        1
+                      </div>
+                    </div>
+                    <div className="w-8 md:w-16 h-px bg-neutral-700"></div>
+                  </div>
+                </div>
 
-            <div className="absolute bottom-6 left-6 right-6">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Notifications
-              </h3>
-              <p className="text-neutral-400 text-sm">
-                Keep up to date with instant notifications.
-              </p>
-            </div>
-
-            {/* Glowing notification bell */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="relative w-24 h-24 group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-blue-500 to-pink-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
-                <div className="absolute inset-6 bg-black rounded-full flex items-center justify-center">
-                  <i className="ri-notification-3-fill text-4xl text-white"></i>
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">3</span>
+                {/* Destinations */}
+                <div className="flex flex-col gap-3 md:gap-4 w-full md:w-auto">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="flex items-center gap-1 md:gap-2">
+                      <div className="w-6 md:w-12 h-px bg-neutral-700"></div>
+                      <i className="ri-arrow-right-line text-sm md:text-lg text-neutral-600"></i>
+                    </div>
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                      <i className="ri-folder-2-line text-lg md:text-xl text-neutral-400"></i>
+                    </div>
+                    <span className="text-xs text-neutral-400 whitespace-nowrap">
+                      Legacy SIEM
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="flex items-center gap-1 md:gap-2">
+                      <div className="w-6 md:w-12 h-px bg-neutral-700"></div>
+                      <i className="ri-arrow-right-line text-sm md:text-lg text-neutral-600"></i>
+                    </div>
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-neutral-700 rounded-lg md:rounded-xl flex items-center justify-center">
+                      <i className="ri-lock-2-line text-lg md:text-xl text-neutral-400"></i>
+                    </div>
+                    <span className="text-xs text-neutral-400 whitespace-nowrap">
+                      Next-Gen SIEM
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* View All Button */}
-        <div className="flex justify-center mt-12">
-          <button className="group relative px-6 py-3 bg-white text-black rounded-full font-['inter2'] font-semibold text-base hover:scale-110 transition-all duration-300 overflow-hidden border-2 border-white hover:border-neutral-400">
+        <div className="flex justify-center mt-8 md:mt-12">
+          <button className="group relative px-5 py-2.5 md:px-6 md:py-3 bg-white text-black rounded-full font-['inter2'] font-semibold text-sm md:text-base hover:scale-110 transition-all duration-300 overflow-hidden border-2 border-white hover:border-neutral-400">
             <span className="relative z-10 flex items-center gap-2">
-              View All Projects
-              <i className="ri-arrow-right-line text-lg group-hover:translate-x-2 transition-transform duration-300"></i>
+              <a target="_blank" href="https://github.com/krishnakumarmahakul/">View All Projects</a>
+              
+              <i className="ri-arrow-right-line text-base md:text-lg group-hover:translate-x-2 transition-transform duration-300"></i>
             </span>
           </button>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default RecentWorks
+export default RecentWorks;

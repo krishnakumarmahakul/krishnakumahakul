@@ -26,7 +26,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex justify-between items-center">
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <NavigationMenuDemo />
           </div>
           <div className="flex justify-end">
@@ -36,7 +36,6 @@ export default function Header() {
             />
           </div>
           <DialogDemo />
-           
         </div>
       </div>
     </header>

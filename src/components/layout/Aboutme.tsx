@@ -36,7 +36,7 @@ function Aboutme() {
 
   return (
     <section className="w-full relative bg-gradient-to-b from-white via-30% via-neutral-700 to-black text-white py-16 md:py-24 px-6 md:px-16">
-      {/* Icon Cloud - Top Right Corner */}
+      
       <div className="absolute top-10 right-10 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] z-0 pointer-events-none">
         <Cloud
           containerProps={{
@@ -68,7 +68,7 @@ function Aboutme() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Heading with Typing Animation */}
+       
         <div className="mb-12">
           <h2 className="text-5xl md:text-5xl lg:text-8xl font-['inter2'] font-bold tracking-tight hover:scale-105 transition-transform duration-300 inline-block">
             <TextType
@@ -86,7 +86,7 @@ function Aboutme() {
           </h2>
         </div>
 
-        {/* Description */}
+       
         <div className="space-y-6 mb-16 max-w-2xl">
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed hover:text-white transition-colors duration-300 group">
             <span className="block group-hover:translate-x-1 transition-transform duration-300">
@@ -117,7 +117,7 @@ function Aboutme() {
           </p>
         </div>
 
-        {/* Stats - Smaller and Right Aligned */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 md:ml-auto md:max-w-2xl">
           {/* Stat 1 */}
           <div className="group relative overflow-hidden bg-neutral-900 rounded-xl p-5 hover:bg-neutral-800 transition-all duration-500 hover:scale-105 hover:shadow-xl border border-neutral-800 hover:border-white">

@@ -1,13 +1,11 @@
 import Aboutme from "./Aboutme";
+import RecentWorks from "./RecentWorks";
 
-
-export default  function Hero() {
+export default function Hero() {
   return (
     <>
-        <div>
-            <Aboutme/>
-        </div>
+      <Aboutme />
+      <RecentWorks/>
     </>
-  )
+  );
 }
-

@@ -35,7 +35,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/contactme",
     description:
       "Get in touch with me for collaborations, opportunities, or just to say hi.",
   },
@@ -59,13 +59,13 @@ export function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-slate-100 to-slate-200 p-6 no-underline outline-none focus:shadow-md dark:from-slate-800 dark:to-slate-900"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-100 to-gray-200 p-6 no-underline outline-none focus:shadow-md text-slate-900"
                     href="/portfolio"
                   >
                     <div className="mt-4 mb-2 text-lg font-medium">
                       Portfolio Overview
                     </div>
-                    <p className="text-sm leading-tight text-slate-600 dark:text-slate-400">
+                    <p className="text-sm leading-tight text-slate-600">
                       A comprehensive showcase of my work and achievements
                     </p>
                   </a>
@@ -74,11 +74,11 @@ export function NavigationMenuDemo() {
               <li>
                 <NavigationMenuLink asChild>
                   <a
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-800 dark:focus:bg-slate-800"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900"
                     href="/skills"
                   >
                     <div className="text-sm font-medium leading-none">Skills</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-slate-600 dark:text-slate-400">
+                    <p className="line-clamp-2 text-sm leading-snug text-slate-600">
                       Technical expertise and competencies
                     </p>
                   </a>
@@ -87,11 +87,11 @@ export function NavigationMenuDemo() {
               <li>
                 <NavigationMenuLink asChild>
                   <a
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-800 dark:focus:bg-slate-800"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900"
                     href="/experience"
                   >
                     <div className="text-sm font-medium leading-none">Experience</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-slate-600 dark:text-slate-400">
+                    <p className="line-clamp-2 text-sm leading-snug text-slate-600">
                       Professional work history and achievements
                     </p>
                   </a>
@@ -100,11 +100,11 @@ export function NavigationMenuDemo() {
               <li>
                 <NavigationMenuLink asChild>
                   <a
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-800 dark:focus:bg-slate-800"
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900"
                     href="/education"
                   >
                     <div className="text-sm font-medium leading-none">Education</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-slate-600 dark:text-slate-400">
+                    <p className="line-clamp-2 text-sm leading-snug text-slate-600">
                       Academic background and certifications
                     </p>
                   </a>
@@ -151,13 +151,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-800 dark:focus:bg-slate-800",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 focus:bg-gray-200 text-slate-900",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-slate-600 dark:text-slate-400">
+          <p className="line-clamp-2 text-sm leading-snug text-slate-600">
             {children}
           </p>
         </a>
